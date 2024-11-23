@@ -1,4 +1,5 @@
-data "vault_approle_auth_backend_role_id" "my_role_id" {
-  backend  = vault_auth_backend.approle.path
-  role_name = vault_approle_auth_backend_role.github_role.role_name
+data "vault_approle_auth_backend_role_id" "github_actions_role" {
+  count     = var.tf_cloud_backend == false ? 1 : 0
+  backend   = "approle"
+  role_name = var.vault_app_role_name
 }
