@@ -17,25 +17,6 @@ variable "repositories" {
 }
 
 
-
-variable "aws_access_key" {
-  description = "AWS Access Key"
-  type        = string
-  sensitive   = true
-}
-
-variable "aws_secret_key" {
-  description = "AWS Secret Key"
-  type        = string
-  sensitive   = true
-}
-
-variable "tfc_token" {
-  description = "Token for authenticating with Terraform Cloud"
-  type        = string
-  sensitive   = true
-}
-
 variable "vault_public_address" {
   description = "Public address of the Vault server"
   type        = string
