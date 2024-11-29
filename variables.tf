@@ -29,13 +29,6 @@ variable "vault_app_role_name" {
   description = "The name of the approle role to create."
 }
 
-variable "vault_token" {
-  description = "Token for authenticating with Vault"
-  type        = string
-  sensitive   = true
-  default     = "value"
-}
-
 
 variable "aws_region" {
   type        = string
