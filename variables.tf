@@ -1,7 +1,7 @@
 variable "tf_cloud_backend" {
   description = "Enable Terraform Cloud as the backend for the trust relationships project."
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "enable_vault_ca" {
@@ -16,6 +16,12 @@ variable "repositories" {
   default = ["tf-vmt-app"]
 }
 
+variable "aws_vault_ttl_token_seconds" {
+  type        = number
+  default     = 120
+  description = "The default lease TTL for tokens created by the AWS secrets engine."
+
+}
 
 variable "vault_public_address" {
   description = "Public address of the Vault server"
