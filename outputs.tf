@@ -7,27 +7,6 @@ output "role_id" {
 # vault write -f auth/approle/role/github-actions-role/secret-id
 
 
-# vault write auth/approle/login \
-#     role_id=7feda001-f749-e673-b40f-d9367c5b76db \
-#     secret_id=cbd98856-cf11-373b-c62b-7d1893331fd9
-
-# output "secret_id" {
-#   value     = vault_approle_auth_backend_role_secret_id.github_role_secret_id.secret_id
-#   sensitive = true
-# }
-
-# output "secret_id_accessor" {
-#   value     = vault_approle_auth_backend_role_secret_id.github_role_secret_id.accessor
-#   sensitive = true
-# }
-
-
-# vault write auth/approle/login \
-#     role_id="7feda001-f749-e673-b40f-d9367c5b76db" \
-#     secret_id="a5280993-945f-1d7d-42c0-e383fee21efa" \
-
-
-
 # output "vault_pki_secret_backend_root_cert_root_2024" {
 #   value = vault_pki_secret_backend_root_cert.root_2024.certificate
 # }

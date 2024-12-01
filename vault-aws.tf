@@ -3,10 +3,11 @@
 ############################################################################################################
 
 resource "vault_aws_secret_backend" "aws_secret_backend" {
-  path       = var.aws_secrets_backend_path
-  region     = var.aws_region
-  access_key = aws_iam_access_key.trust_relationships.id
-  secret_key = aws_iam_access_key.trust_relationships.secret
+  path                      = var.aws_secrets_backend_path
+  region                    = var.aws_region
+  access_key                = aws_iam_access_key.trust_relationships.id
+  secret_key                = aws_iam_access_key.trust_relationships.secret
+  default_lease_ttl_seconds = var.aws_vault_ttl_token_seconds
 }
 
 resource "vault_aws_secret_backend_role" "role" {
